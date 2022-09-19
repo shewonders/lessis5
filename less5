@@ -1,0 +1,65 @@
+#task1 (можно ли не создавать второе открытие?)
+# f = open(r"C:\Users\Darya\PycharmProjects\pythonProject\lessis5\buffer.txt", "w", encoding="utf-8")
+# inp = input("Type something for the file. Type spaces and press enter if done:  ")
+# if inp.isspace() == True:
+#     f.close()
+#     print("Have a good day!")
+# else:
+#     print(inp, file=f)
+#     f.close()
+#     ff = open(r"C:\Users\Darya\PycharmProjects\pythonProject\lessis5\buffer.txt", "r", encoding="utf-8")
+#     print(f"You wrote: {ff.read()} into buffer.txt")
+#     ff.close()
+
+#task2:
+# print("Now, let's count: ")
+# ff = open(r"C:\Users\Darya\PycharmProjects\pythonProject\lessis5\buffer2.txt", "r", encoding="utf-8")
+# cont = ff.readlines()
+# print(cont)
+# l = 0
+# list_lines = []
+# for el in cont:
+#     l = l + 1
+#     print(f"Line {l} - length {len(el) - 1}")
+# print(f"You have entered {l} lines")
+# ff.close
+
+#task3:
+# ff = open(r"C:\Users\Darya\PycharmProjects\pythonProject\lessis5\buffer3.txt", "r", encoding="utf-8")
+# cont = ff.readlines()
+# if len(cont) < 10:
+#     print("Number of employees under 10. Add more and rerun")
+# else:
+#     cont1 = [el[0:-1].split() for el in cont]
+#     print(cont1)
+#     cont2 = [el[0] for el in cont1 if int(el[1]) < 20000]
+#     print(f"The list of your employees paid above 20000 is: {cont2}")
+#     n = 0
+#     for el in cont1:
+#         n = n + int(el[1])
+#     avg = n / len(cont)
+#     print(f"The average salary in your company is: {avg}")
+
+#Task4: (корявый вывод)
+# f = open(r"C:\Users\Darya\PycharmProjects\pythonProject\lessis5\buffer4.txt", "r", encoding="utf-8")
+# content = f.readlines()
+# print(content)
+# dict = {"One":"Один","Two":"Два","Three":"Три","Four":"Четыре"}
+# ff = open(r"C:\Users\Darya\PycharmProjects\pythonProject\lessis5\buffer41.txt", "w", encoding="utf-8")
+# for el in content:
+#     cont = el[0:-1].split(" - ")
+#     print(cont)
+#     cont[0] = [dict.get(key) for key in dict if key == cont[0]]
+#     ff.write(f"{cont}")
+# ff.close()
+
+#Task5:
+# with open(r"C:\Users\Darya\PycharmProjects\pythonProject\lessis5\buffer5.txt", "x", encoding="utf-8") as f:
+#     summa = 0
+#     inp = input("Type some numbers separated by spaces: ")
+#     f.write(inp)
+#     inp2 = inp.split()
+#     for el in inp2:
+#         summa = summa + int(el)
+# print(f"The sum of your numbers is {summa}")
+# f.close()
